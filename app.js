@@ -1,14 +1,6 @@
-const hoursContainer = document.querySelector('.hours')
-const minutesContainer = document.querySelector('.minutes')
-const secondsContainer = document.querySelector('.seconds')
+const hourContainer = document.querySelector('.hour')
 
 const updateHour = setInterval(() => {
     const date = new Date()
-    let hour = date.getHours()
-    let minute = date.getMinutes()
-    let second = date.getSeconds()
-
-    hoursContainer.innerHTML = hour
-    minutesContainer.innerHTML = minute
-    secondsContainer.innerHTML = second
+    hourContainer.innerHTML = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`
 }, 1000)
